@@ -10,7 +10,7 @@ const body = document.body;
 const allElements = document.querySelectorAll('*');
 
 make.addEventListener('click', () => {
-    window.location.href = "test.html";
+    window.location.href = "make.php";
 });
 
 goToLinks.addEventListener('click', () => {
