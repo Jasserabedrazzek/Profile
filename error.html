@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Connection</title>
+    <link rel="shortcut icon" href="static/images/remove.png" type="image/x-icon">
+    <style>
+        body {
+    background-color: azure;
+    
+    }
+.error {
+    cursor: not-allowed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: red;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <div class="error">
+        <h1><i class="fa-sharp fa-solid fa-cloud-slash">error</i></h1>
+        <h2>We are sorry, but something went wrong.</h2>
+        <h3>check Your Internet Connection!</h3>
+    </div>
+    <script>
+        function checkInternetConnection() {
+            const online = navigator.onLine;
+
+            if (online) {
+                window.location.href = 'index.html';
+        } else {
+            
+        }
+    }
+
+        checkInternetConnection();
+        setInterval(checkInternetConnection, 550);
+    </script>
+</body>
+</html>
